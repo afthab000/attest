@@ -1,0 +1,40 @@
+db.attest.insert( { "name"         : "user",
+        "email"        : "user@gmail.com",
+        "password"     : "user",
+        "role"         : "user", 
+        "files": [{
+        "parent" : "String",
+        "batch" : "String",
+        "client" : "String",
+        "id" : "Number",
+        "name" : "String",
+        "recDate" :"String",
+        "duedate" : "String",
+        "notary" : "Boolean",
+        "mha" : "Boolean",
+        "mea" : "Boolean",
+        "consulateType" : "String",
+        "completed" : "String",
+        "status" : "String",
+        "remarks" : "String",
+        "selected" : "Boolean"}]})
+
+
+db.collection.update({ "name" : "user"},
+                      {$pull : { "files" : [{"recDate" :"String"}] } } )
+db.attest.update( { "name" : "user" },{ $push: { "files": {
+        "parent" : "Pending",
+        "batch" : "String",
+        "client" : "String",
+        "id" : "Number",
+        "name" : "Afthab",
+        "recDate" :"String",
+        "duedate" : "String",
+        "notary" : "Boolean",
+        "mha" : "Boolean",
+        "mea" : "Boolean",
+        "consulateType" : "String",
+        "completed" : "String",
+        "status" : "String",
+        "remarks" : "String",
+        "selected" : "Boolean"} } })

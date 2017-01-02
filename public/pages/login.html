@@ -1,0 +1,52 @@
+   <div ng-controller="loginCtrl" class="login-form-container">
+        <div class="login-form">  <h4>Log in</h4>
+        <hr />
+        <form >
+            <div class="form-group">
+              <label for="sel1">Select list:</label>
+              <select class="selectpicker" id="sel1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div ng-hide="alert" class="alert alert-danger">
+              Invalid Username or Password. Please try again 
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="username" placeholder="Username" type="text" ng-model="user.name">
+            </div>
+            <div class="form-group">
+                <input class=
+                       
+                       "form-control" id="password" placeholder="Password" type="password" ng-model="user.password">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary pull-right" ng-click="loginSubmit(user)">Login</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary pull-right" ui-sref="signup">Register</button>
+            </div>
+                        <div class="form-group">
+                <a ng-click="">Forgot Password?</a>
+            </div>
+        </form>
+        </div>
+
+                 <section id="simple-usage" ng-controller="SimpleUsageCtrl">
+            <select selectpicker ng-model="model" toggle-dropdown multiple>
+      
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+      </select>
+
+
+
+      </section>
+
+
+        </div>
+
+

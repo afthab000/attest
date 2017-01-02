@@ -1,0 +1,112 @@
+<div class="addbatch-form-container container">
+    
+    <form class="addbatch-form">
+
+                <select class="selectpicker" multiple>
+                                    <option >Option 1</option>
+                                    <option >Option 2</option>
+                                    <option >Option 3</option>
+                              
+
+                        </select>
+        
+        <div class="add-batch-table-wrp"> 
+
+            <h3>ADD FILE <span class="glyphicon glyphicon-plus-sign" ng-click= 'addBatchRow()'></span></h3>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                    <th>Select</th>
+                    <th>File ID</th>
+                    <th>File Name</th>
+                    <th>Due Date</th>
+                    <th>Notary</th>
+<!--                     <th>MHA</th>
+                    <th>MEA</th>
+                    <th>Consulate</th> -->
+                    <th>Remarks</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat= 'file in files | filter: pending'>
+                    
+                        <td>
+                            <input type="checkbox" ng-click="file.selected = !file.selected" class="form-control">
+                        </td>
+                        
+                        <td>
+                            <div ng-show="viewArray[$index]"><input type="text" ng-model = 'file.id' class="form-control file-id-input" ng-show="modifyArray[$index]"></div>
+                            <div ng-hide="modifyArray[$index]">{{file.id}}</div>
+                        </td>
+                        
+                        <td>
+                            <div ng-show="viewArray[$index]"><input type="text" ng-model = 'file.name' class="form-control file-name-input"></div>
+                            <div ng-hide="modifyArray[$index]">{{file.name}}</div>
+                        </td>
+                        
+                        <td>
+                            <div ng-show="viewArray[$index]"><input type="text" ng-model = 'file.duedate' class="form-control file-name-input"></div>
+                            <div ng-hide="modifyArray[$index]">{{file.duedate}}</div>
+                        </td>
+                        
+                        <td>
+                        <section id="simple-usage" ng-controller="SimpleUsageCtrl">
+                        <select selectpicker ng-model="file.attest" toggle-dropdown multiple>
+      
+                            <option>Notary</option>
+                            <option>MEA</option>
+                            <option>MHA</option>
+                            <option>Kerala Home</option>
+                            <option>Tamil Nadu Home</option>
+                          </optgroup>
+                          <optgroup label="Consulate">
+                            <option>Tent</option>
+                            <option>Flashlight</option>
+                            <option>Toilet Paper</option>
+                          </optgroup>
+                        </select>
+                        </section></td>
+
+<!--                         <td><input type="checkbox" ng-disabled="true" ng-checked="file.mha" class="form-control"></td>
+                        
+                        <td>
+                            <div ng-show="viewArray[$index]"><input type="checkbox" ng-model = 'file.mea' class="form-control"></div>
+                            <div ng-hide="modifyArray[$index]"><input type="checkbox" ng-disabled="true" ng-checked="file.mea" class="form-control"></div>                 
+                        </td>
+                        
+                        <td>
+                            
+                            <div ng-show="viewArray[$index]">
+                                <select class="form-control" class='consulate-type-select' ng-model = 'file.consulateType'>
+                                    <option>None</option>
+                                    <option>UAE Consulate(Mumbai)</option>
+                                    <option>UAE Consulate(Delhi)</option>
+                                    <option>Saudi Consulate(Delhi)</option>
+                        
+                                </select>
+                            </div>
+                            <div ng-hide="modifyArray[$index]">{{file.consulateType}}
+                            </div>
+                        </td> -->
+                       
+                        <td>
+                            <div ng-show="viewArray[$index]">
+                                <input type="textbox" ng-model = 'file.remarks' class="form-control remarks-input">
+                            </div>
+                            <div ng-hide="modifyArray[$index]">{{file.remarks}}
+                            </div>
+                        </td>
+                        <td>
+                        <button ng-hide="viewArray[$index]" ng-click="modify(file)">Edit</button>
+                        <button ng-show="modifyArray[$index]" ng-click="update(file)">Save</button>
+                        <button ng-hide="viewArray[$index]" data-ng-click="removeRow($index)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    
+    </div>
+        
+        <button ng-click="sendToSafa()" class="btn btn-primary pull-right">Send to Safa</button>
+    </form>
+</div>
+

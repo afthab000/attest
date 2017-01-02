@@ -1,0 +1,24 @@
+.main-wrapper{
+    width: 100%;
+}
+.login-form-container{
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.login-form{
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+.login-form form{
+    width: 400px;
+    margin: 0 auto;
+}
+.login-form h4{
+    text-align: center;
+}
+.teamform{
+    padding-top: 50px;
+}

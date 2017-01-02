@@ -1,0 +1,71 @@
+<div class="signup container">
+    <div class="row main">
+        <div class="panel-heading">
+           <div class="panel-title text-center">
+                <h1 class="title">Safa Exports</h1>
+                <hr />
+            </div>
+        </div> 
+        <div class="main-login main-center">
+            <form name="signup" class="form-horizontal" method="post" action="#">
+                <br>
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Agent Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" ng-model = "user.name" name="name" id="name"  placeholder="Enter Agent Name"/>
+
+                        </div>
+                        <div ng-messages="signup.name.$error" class = "text-danger">
+                              <div ng-message="required">This field is required</div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Agent Email</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="email" class="form-control" ng-model = "user.email" name="email" id="email"  placeholder="Enter Agent Email"/>
+                        </div>
+                        <div ng-messages="signup.email.$error" class = "text-danger">
+                              <div ng-message="required">This field is required</div>
+                              <div ng-message="email">Your email address is invalid</div>
+                            </div>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" ng-model = "user.password" name="password" id="password"  placeholder="Enter Password"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="confirm" id="confirm" ng-model = "confirmPassword" placeholder="Confirm Password"/>
+                        </div>
+                        <div ng-show = "confirmFlag" class = "text-danger">Passwords do not match. Please try again. 
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <button type="button" class="btn btn-primary btn-lg btn-block login-button" ng-disabled="signupError" ng-click = "addUser(user)">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
