@@ -42,7 +42,8 @@
   },
   "scripts": {
     "test": "karma start test\\karma.conf.js",
-      "start": "node index.js"
+      "start": "node index.js",
+    "test": "mocha"
   }  
 }
 
