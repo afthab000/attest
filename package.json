@@ -42,7 +42,6 @@
     "test": "karma start test\\karma.conf.js",
       "start": "node index.js",
   "test": "mocha",
-  "postinstall": "bower install && grunt build"
   }  
 }
 
