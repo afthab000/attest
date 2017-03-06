@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "MEAN Stack User Registration and Login Example Application",
     "engines": {
-        "node" : "5.9.1"
+        "node" : "6.9.1",
+        "npm": "1.4.29"
     }, 
     "main": "index.js",
     "scripts": {
