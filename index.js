@@ -14,6 +14,8 @@ app.use(session({ secret: config.secret, resave: false, saveUninitialized: true 
 
 // use JWT auth to secure the api
 app.use('/api', expressJwt({ secret: config.secret }).unless({ path: ['/api/users/authenticate', '/api/users/register'] }));
+
+console.log("reached here");
 app.get('/', function (req, res) {
     return res.redirect('/app');
 });
