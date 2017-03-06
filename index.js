@@ -27,6 +27,7 @@ app.use('/api/users', require('./controllers/api/users.controller'));
 
 
 // start server
-var server = app.listen(process.env.PORT || 5000, function () {
-    console.log('Server listening at http://' + server.address().address + ':' + server.address().port);
+var port = process.env.PORT || 8000;
+var server.listen(port, function() {
+    console.log("App is running on port " + port);
 });
