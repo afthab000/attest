@@ -1,7 +1,7 @@
 require('rootpath')();
 var express = require('express');
 var app = express();
-var session = require('express-session');
+var session = require('cookie-session');
 var bodyParser = require('body-parser');
 var expressJwt = require('express-jwt');
 var config = require('config.json');
