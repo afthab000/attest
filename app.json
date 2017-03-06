@@ -1,6 +1,8 @@
 {
-    "name": "mean-stack-registration-login-example",
-    "version": "1.0.0",
-    "description": "MEAN Stack User Registration and Login Example Application",
-    "repository":  "https://github.com/afthab000/attest"
+  "name": "Login Page",
+  "description": "MEAN Stack User Registration and Login Example Application",
+  "repository": "https://github.com/afthab000/attest",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
 }
