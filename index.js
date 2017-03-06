@@ -30,6 +30,6 @@ app.use('/api/users', require('./controllers/api/users.controller'));
 
 // start server
 var port = process.env.PORT || 8000;
-server.listen(port, function() {
+app.listen(port, function() {
     console.log("App is running on port " + port);
 });
